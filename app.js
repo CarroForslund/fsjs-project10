@@ -6,7 +6,7 @@ const { Book, Patron, Loan } = db.models;
 //Passing parameters separately (sqlite)
 const sequelize = new Sequelize({
     dialect: 'sqlite',
-    storage: 'db/library.db'
+    storage: 'db/library.db',
 });
 
 // async IIFE (Immediately Invoked Function Expression)

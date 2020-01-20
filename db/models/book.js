@@ -40,8 +40,12 @@ module.exports = (sequelize) => {
         },
         first_published: {
             type: Sequelize.INTEGER,
-        }
-    }, { sequelize }); //same as { sequelize: sequelize }
+        },
+    },
+    { 
+        timestamps: false,
+        sequelize 
+    });
     
     return Book;
 };
