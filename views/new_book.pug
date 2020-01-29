@@ -3,7 +3,7 @@ include header
 block content
 
   h1 New Book
-  form
+  form(action='new', method='post')
     p
       label(for='title') Title
       input#title(type='text')
