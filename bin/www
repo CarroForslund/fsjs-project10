@@ -9,7 +9,7 @@ const debug = require('debug')('fsjs-project10:server');
 const http = require('http');
 const { Sequelize } = require('sequelize');
 const db = require('../db');
-const { Book, Patron, Loan } = db.models;
+const { Book } = db.models;
 
 /**
  * Get port from environment and store in Express.
@@ -38,8 +38,11 @@ const sequelize = new Sequelize({
   try {
       await sequelize.authenticate();
       console.log('Connection has been established successfully.');
-      const bookById = await Book.findByPk(1);
-      console.log(bookById.toJSON());
+      // const bookById = await Book.findByPk(1);
+      // console.log(bookById.toJSON());
+      // console.log(bookById.title);
+      // const books = await Book.findAll();
+      // console.log(books);
   } catch (error) {
       console.error('Unable to connect to the database:', error);
       if (error.name === 'SequelizeValidationError') {

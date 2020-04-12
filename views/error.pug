@@ -1,5 +1,6 @@
 include header
 
 block content
-    h1 Server Error
-    p Sorry! There was an unexpected error on the server.
+    h1= error.message
+    h2= error.status
+    pre= error.stack
