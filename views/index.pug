@@ -2,6 +2,9 @@ include header
 
 block content
 	h1 Books
+
+	if(error)
+		p= error
 	p
 		a.button(href='/books/new') Create New Book
 	table
